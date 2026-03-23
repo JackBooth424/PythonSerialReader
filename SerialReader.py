@@ -1,11 +1,11 @@
-import serial
+import serial # pip3(or pip) install pyserial to make this import work
 import csv
 from datetime import datetime
 import time
 
-PORT = '/dev/cu.usbserial-0001'
-BAUD = 4800
-OUTPUT_FILE = 'temperature_log.csv'
+PORT = '/dev/cu.usbserial-0001' # Use ls /dev/cu.* in terminal app to check what arduino will be called for your specific machine
+BAUD = 4800 # ENSURE SAME AS Serial.begin(XXXX)
+OUTPUT_FILE = 'temperature_log.csv' # Can be called anything you like
 
 def open_port():
     ser = serial.Serial()
